@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "ee71d5d1-7b94-4843-a6fc-716c851e29f4",
+		"name": "Integration-Workspace-Labh_Yadav",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "milestone1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://integration-worspace-labhyadav-fumq.us-e2.cloudhub.io/api",
+					"protocol": "http",
+					"host": [
+						"integration-worspace-labhyadav-fumq",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "milestone2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 2003\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://integration-worspace-labhyadav-fumq.us-e2.cloudhub.io/api1",
+					"protocol": "http",
+					"host": [
+						"integration-worspace-labhyadav-fumq",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"api1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "milestone3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://integration-worspace-labhyadav-fumq.us-e2.cloudhub.io/api2",
+					"protocol": "http",
+					"host": [
+						"integration-worspace-labhyadav-fumq",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"api2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "e09d9e83-af2c-4da9-a8b5-629e5cf72f0c",
+		"name": "API-Collection-Labh_Yadav",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "milestone3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"checking id 40 has userId 4\",function(){\r",
+							"    let resp=pm.response.json();\r",
+							"    let rrsp=resp.response.json();\r",
+							"    pm.expect(resp.id.eql(40)).to.have.userId(4);\r",
+							"});\r",
+							"pm.test(\"checking title is string\",function(){\r",
+							"    let resp=pm.response.json();\r",
+							"    pm.expect(resp.title).to.be(\"string\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"checking header is Content-Type\",function(){\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"checking status is 200 or not\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time above 1000 milliseconds\", function () {\r",
+							"\tpm.expect(pm.response.responseTime).to.be.below(1000)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "milestone4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"verifying email and first_name\",function(){\r",
+							"    let resp=pm.response.json();\r",
+							"    pm.expect(resp.email).to.eql(\"labyadav@gmail.com\");\r",
+							"    pm.expect(resp.first_name).to.eql(\"Labh\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"checking header is Content-Type\",function(){\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"checking status is 201 or not\",function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time above 1000 milliseconds\", function () {\r",
+							"\tpm.expect(pm.response.responseTime).to.be.below(1000)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"last_name\": \"K\",\r\n            \"avatar\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "milestone5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"checking first_name,last_name and email is updated\",function(){\r",
+							"    let resp=pm.response.json();\r",
+							"    pm.expect(resp.email).to.eql(\"amith.kumar@reqres.in\");\r",
+							"    pm.expect(resp.first_name).to.eql(\"Amith\");\r",
+							"    pm.expect(resp.last_name).to.eql(\"Kumar\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"checking field updatedAt \",function(){\r",
+							"    pm.response.to.have.property(\"updatedAt\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"checking status is 200 or not\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"checking header is Content-Type\",function(){\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time above 1000 milliseconds\", function () {\r",
+							"\tpm.expect(pm.response.responseTime).to.be.below(1000)\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"amith.kumar@reqres.in\",\r\n    \"first_name\": \"Amith\",\r\n    \"last_name\": \"Kumar\",\r\n    \"avatar\": \"\",\r\n    \"id\": \"664\",\r\n    \"createdAt\": \"2022-02-15T15:18:16.933Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

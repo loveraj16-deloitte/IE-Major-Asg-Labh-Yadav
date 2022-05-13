@@ -1,0 +1,70 @@
+#%RAML 1.0
+types:
+  milestone1Response:
+    properties:
+      id:
+        example: 2482
+        type: number
+        format: int
+      name:
+        example: Kartik Kocchar
+        type: string
+      email:
+        example: kartik_kocchar@rutherford.io
+        type: string
+      gender:
+        example: female
+        type: string
+      status:
+        example: inactive
+        type: string
+  milestone2Response:
+    properties:
+      Userdetails:
+        items:
+          properties:
+            post_id:
+              example: 2003
+              type: number
+              format: int
+            id:
+              example: 1978
+              type: number
+              format: int
+            name:
+              example: Bhaaswar Pothuvaal III
+              type: string
+  milestone3Response:
+    properties:
+      Name:
+        example: Gorakhanatha Chaturvedi
+        type: string
+      Status:
+        example: active
+        type: string
+      Gender:
+        example: female
+        type: string
+title: IE-MAjor-Assig-Labh_Yadav
+mediaType:
+  - application/json
+protocols:
+  - HTTP
+/milestone1:
+  post:
+    responses:
+      "201":
+        body:
+          type: milestone1Response
+/milestone2:
+  post:
+    responses:
+      "201":
+        body:
+          type: milestone2Response
+/milestone3:
+  post:
+    responses:
+      "201":
+        body:
+          type: milestone3Response
